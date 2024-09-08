@@ -169,6 +169,7 @@ body {
   border-radius: 10px;
   background: var(--primary-color);
   color: var(--white);
+  text-decoration: none;
 }
 
 .sm-btn-secondary {
@@ -180,6 +181,7 @@ body {
   border-radius: 10px;
   background: var(--secondary-color);
   color: var(--white);
+  text-decoration: none;
 }
 
 .lg-btn-primary {
@@ -191,6 +193,7 @@ body {
   border-radius: 10px;
   background: #04395e;
   color: var(--white);
+  text-decoration: none;
 }
 
 .lg-btn-secondary {
@@ -202,6 +205,7 @@ body {
   border-radius: 10px;
   background: var(--secondary-color);
   color: var(--white);
+  text-decoration: none;
 }
 
 .sm-btn-primary a {
@@ -213,4 +217,31 @@ body {
   text-decoration: none;
   color: white;
 }
+
+.lg-btn-primary a {
+  text-decoration: none;
+  color: white;
+}
+
+.lg-btn-secondary a {
+  text-decoration: none;
+  color: white;
+}
+
+.lg-btn-primary:hover {
+  color: white;
+}
+
+.lg-btn-secondary:hover {
+  color: white;
+}
+
+.sm-btn-primary:hover {
+  color: white;
+}
+
+.sm-btn-secondary:hover {
+  color: white;
+}
+
 /* style button */
