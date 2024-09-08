@@ -171,6 +171,17 @@ body {
   color: var(--white);
 }
 
+.sm-btn-secondary {
+  display: inline-flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  border-radius: 10px;
+  background: var(--secondary-color);
+  color: var(--white);
+}
+
 .lg-btn-primary {
   display: inline-flex;
   padding: 12px 40px;
@@ -194,6 +205,11 @@ body {
 }
 
 .sm-btn-primary a {
+  text-decoration: none;
+  color: white;
+}
+
+.sm-btn-secondary a {
   text-decoration: none;
   color: white;
 }
