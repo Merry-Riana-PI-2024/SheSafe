@@ -1,5 +1,6 @@
 .hero-section {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -70,4 +71,22 @@
 .guide-card img {
   width: 30%;
   object-fit: contain;
+}
+
+.advantages-section {
+}
+
+.advantages-title {
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 32px;
+  border-radius: 0px 0px 30px 30px;
+}
+
+.advantages-title h4 {
+  color: white;
+  font-weight: bold;
+  text-align: center;
 }
