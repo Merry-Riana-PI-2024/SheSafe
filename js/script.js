@@ -1,10 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("views/navigation.html")
+  fetch("../parts/navigation.html")
     .then((response) => response.text())
     .then((data) => {
       document.getElementById("navigation").innerHTML = data;
 
-      // Setelah navigasi dimuat, tambahkan event listener
       const burgerMenu = document.getElementById("burger-menu");
       const navLinks = document.getElementById("nav-links");
 
@@ -19,5 +18,11 @@ document.addEventListener("DOMContentLoaded", function () {
           navLinks.style.display = "none"; // Sembunyikan lagi jika sudah tampil
         }
       });
+    });
+
+  fetch("../parts/nav-bottom.html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("nav-bottom").innerHTML = data;
     });
 });
