@@ -20,7 +20,7 @@ body {
   width: 375px;
   margin: 0 auto;
   background-color: var(--white);
-  padding: 0 1rem;
+  /* padding: 0 1rem; */
 }
 
 /* style navigation landing page */
