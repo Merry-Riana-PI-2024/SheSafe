@@ -10,9 +10,16 @@
     --white: #ffffff;
 }
 
-.container{
-    padding: 40px 45px;
+body {
+    font-size: 12px;
 }
+  
+.wrapper-mobile {
+    max-width: 375px !important;
+    width: 375px;
+    margin: 0 auto;
+}
+
 
 .header{
     margin-bottom: 50px;
@@ -63,7 +70,7 @@ textarea{
 }
 
 
-/*Button*/
+/*---------------Button-------------*/
 .sm-btn-secondary {
     display: inline-flex;
     padding: 10px 24px;
