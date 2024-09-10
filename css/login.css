@@ -27,6 +27,7 @@ p {
 small{
   color: var(--secondary-color);
   font-weight: 500;
+  font-size: smaller;
 }
 
 h1{
@@ -69,5 +70,21 @@ a{
 
 ::placeholder{
   font-size: 14px;
-  padding-left: 15px;
+  padding-left: 10px;
+  color: var(--light-grey);
+}
+
+
+/* ------------------------Register------------------------ */
+
+label{
+  color: var(--primary-color);
+}
+
+.inline-form{
+  display: inline-flex;
+}
+
+.spaceinput{
+  margin-right: 10px;
 }
