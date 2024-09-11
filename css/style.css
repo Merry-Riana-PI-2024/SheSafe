@@ -2,7 +2,7 @@
 :root {
   --primary-color: #04395e;
   --secondary-color: #ba324f;
-  --light-primary: #f2f5f7;
+  --light-primary: #d9e1e7;
   --light-secondary: #f8ebed;
   --dark-primary: #032b47;
   --dark-secondary: #8c263b;
@@ -20,7 +20,7 @@ body {
 .wrapper-mobile {
   width: 480px;
   margin: 0 auto;
-  background-color: var(--white);
+  /* background-color: var(--white); */
   /* padding: 0 1rem; */
 }
 
