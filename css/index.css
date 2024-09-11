@@ -1,3 +1,7 @@
+.welcome-content {
+  background-color: white;
+}
+
 .hero-section {
   display: flex;
   flex-direction: column;
