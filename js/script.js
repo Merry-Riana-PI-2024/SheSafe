@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Fetch and load the navigation content
-  fetch("../parts/navigation.html")
+  fetch("/parts/navigation.html")
     .then((response) => response.text())
     .then((data) => {
       document.getElementById("navigation").innerHTML = data;
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   // Fetch and load the bottom navigation content
-  fetch("../parts/nav-bottom.html")
+  fetch("/parts/nav-bottom.html")
     .then((response) => response.text())
     .then((data) => {
       document.getElementById("nav-bottom").innerHTML = data;
