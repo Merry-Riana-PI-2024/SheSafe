@@ -92,6 +92,16 @@ a {
   margin-top: -3rem;
 }
 
+#error-message {
+  display: flex;
+  justify-content: flex-start;
+}
+
+#error-message p {
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
 /* ------------------------Specific Register------------------------ */
 
 label {
