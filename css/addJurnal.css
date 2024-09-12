@@ -92,3 +92,7 @@ textarea {
   color: var(--white);
   border: none;
 }
+
+.img-addjurnal-container {
+  background-color: white;
+}
