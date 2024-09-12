@@ -23,74 +23,105 @@
         </div>
         <div class="row align-items-center">
           <div class="header-text mb-4">
-            <h1>Daftar Akun</h1>
+            <h1 class="fw-bold">Daftar Akun</h1>
             <p class="desc">
               Ruang Aman untuk Pemberdayaan dan Keadilan Perempuan
             </p>
           </div>
-          <form>
+          <form id="registration-form">
             <div class="mb-3">
-              <label for="nama" class="form-label">Nama Lengkap</label>
+              <label for="nama" class="form-label fw-bold">Nama Lengkap</label>
               <input
                 type="text"
                 class="form-control"
-                id="nama"
-                placeholder="Nama Lengkap" />
+                id="full_name"
+                name="full_name"
+                placeholder="Nama Lengkap"
+                required />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label fw-bold">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="Email"
+                required />
             </div>
             <div class="mb-3 inline-form col-12">
               <div class="spaceinput">
-                <label for="gender" class="form-label">Jenis Kelamin</label>
+                <label for="gender" class="form-label fw-bold"
+                  >Jenis Kelamin</label
+                >
                 <input
                   type="text"
                   class="form-control"
                   id="gender"
-                  placeholder="Jenis Kelamin" />
+                  name="gender"
+                  placeholder="Jenis Kelamin"
+                  required />
               </div>
               <div class="spaceinput col-6">
-                <label for="ttl" class="form-label">Tanggal Lahir</label>
+                <label for="ttl" class="form-label fw-bold"
+                  >Tanggal Lahir</label
+                >
                 <input
                   type="date"
                   class="form-control"
                   id="ttl"
-                  placeholder="dd/mm/yyy" />
+                  name="birth_date"
+                  placeholder="dd/mm/yyy"
+                  required />
               </div>
             </div>
             <div class="mb-1">
-              <label for="identitas" class="form-label">Bukti Identitas</label>
+              <label for="identitas" class="form-label fw-bold"
+                >Bukti Identitas</label
+              >
               <input
                 type="file"
                 class="form-control"
                 id="identitas"
-                placeholder="Password" />
+                name="file"
+                placeholder=""
+                required />
             </div>
             <small>**Maximum file 2mb</small>
             <div class="mb-3 mt-3">
-              <label for="password" class="form-label">Password</label>
+              <label for="password" class="form-label fw-bold">Password</label>
               <input
                 type="password"
                 class="form-control"
                 id="password"
-                placeholder="Password" />
+                name="password"
+                placeholder="Password"
+                required />
             </div>
             <div class="mb-3">
-              <label for="password" class="form-label"
+              <label for="password" class="form-label fw-bold"
                 >Konfirmasi Password</label
               >
               <input
                 type="password"
                 class="form-control"
-                id="password"
-                placeholder="Konfirmasi Password" />
+                id="password_confirm"
+                name="password"
+                placeholder="Konfirmasi Password"
+                required />
             </div>
             <div
               class="input-group mb-3 d-flex justify-content-center align-items-center">
-              <button class="lg-btn-primary">Daftar</button>
+              <button class="lg-btn-primary" onclick="regist()">Daftar</button>
             </div>
           </form>
 
+          <div id="error-messages"></div>
+
           <div class="row">
             <small class="text-wrap text-center"
-              >Sudah Punya Akun? <a href="registerPage.html">Masuk</a></small
+              >Sudah Punya Akun?
+              <a class="fw-bold" href="registerPage.html">Masuk</a></small
             >
           </div>
         </div>
@@ -107,4 +138,5 @@
     </div>
   </body>
   <script src="../js/script.js"></script>
+  <script src="../js/regist.js"></script>
 </html>
