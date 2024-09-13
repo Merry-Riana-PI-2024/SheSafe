@@ -1,5 +1,3 @@
-
-Anda bilang:
 const api = "https://66dfecb22fb67ac16f279532.mockapi.io/Shesafe/users";
 
 async function regist() {

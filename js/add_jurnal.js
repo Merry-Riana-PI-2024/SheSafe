@@ -1,32 +1,125 @@
 window.onload = function () {
   const isLoggedIn = localStorage.getItem("LoggedIn");
-  const email = localStorage.getItem("email");
 
   // Jika pengguna belum login, redirect ke halaman login
   if (!isLoggedIn) {
     window.location.href = "login.html";
   } else {
-    // document.getElementById('welcome-message').innerText = `Welcome, ${username}!`;
   }
 };
 
-const apiUrl = "https://66dfecb22fb67ac16f279532.mockapi.io/Shesafe/jurnal";
+function getNextId() {
+  let currentId = localStorage.getItem("nextJournalId");
+  if (!currentId) {
+    currentId = 1;
+  } else {
+    currentId = parseInt(currentId) + 1;
+  }
+  localStorage.setItem("nextJournalId", currentId);
+  return currentId;
+}
 
-async function add_jurnal() {
-  const judul = document.getElementById("judul-jurnal").value;
-  const deskripsi = document.getElementById("descKejadian").value;
+function save_jurnal(
+  id,
+  title,
+  start_date,
+  end_date,
+  klasifikasi,
+  desc,
+  file,
+  currentDate,
+  active
+) {
+  let journals = JSON.parse(localStorage.getItem("my_jurnal")) || [];
 
-  const data = { judul, deskripsi };
+  const fileName = file ? file.name : "No file";
+  const newEntry = {
+    id,
+    title,
+    start_date,
+    end_date,
+    klasifikasi,
+    desc,
+    fileName, // Simpan nama file, bukan objek file
+    currentDate,
+    active,
+  };
 
-  const response = await fetch(apiUrl, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
-  });
+  if (id) {
+    // Edit existing entry
+    const index = journals.findIndex((entry) => entry.id === parseInt(id));
+    if (index > -1) {
+      journals[index] = newEntry;
+    }
+  } else {
+    // Add new entry
+    id = getNextId();
+    newEntry.id = id;
+    journals.push(newEntry);
+  }
 
-  const result = await response.json();
-  console.log("Created:", result);
-  document.getElementById("form_addjurnal").reset();
+  localStorage.setItem("my_jurnal", JSON.stringify(journals));
+  return id;
+}
+
+function add_jurnal() {
+  // Daftar nama bulan dalam bahasa Indonesia
+  const bulanIndo = [
+    "Januari",
+    "Februari",
+    "Maret",
+    "April",
+    "Mei",
+    "Juni",
+    "Juli",
+    "Agustus",
+    "September",
+    "Oktober",
+    "November",
+    "Desember",
+  ];
+
+  // Mendapatkan tanggal saat ini
+  const tanggal = new Date();
+
+  // Mengambil bagian tanggal, bulan, dan tahun
+  const hari = tanggal.getDate();
+  const bulan = tanggal.getMonth(); // Bulan dimulai dari 0
+  const tahun = tanggal.getFullYear();
+
+  // Format tanggal
+  const currentDate = `${hari} ${bulanIndo[bulan]} ${tahun}`;
+  const active = 1;
+  const title = document.getElementById("judul-jurnal").value;
+  const start_date = document.getElementById("start-date").value;
+  const end_date = document.getElementById("end-date").value;
+  const klasifikasi = document.getElementById("klasifikasikasus").value;
+  const desc = document.getElementById("descKejadian").value;
+  const fileInput = document.getElementById("bukti_file");
+  const file = fileInput ? fileInput.files[0] : null; // Pastikan fileInput ada
+  const id = document.getElementById("journalId")
+    ? document.getElementById("journalId").value
+    : ""; // Pastikan journalId ada
+
+  const newId = save_jurnal(
+    id,
+    title,
+    start_date,
+    end_date,
+    klasifikasi,
+    desc,
+    file,
+    currentDate,
+    active
+  );
+
+  if (newId) {
+    // document.getElementById("form_addjurnal").reset(); // Kosongkan form setelah berhasil
+    // document.getElementById("journalId").value = ""; // Kosongkan ID
+    window.location.href = "/views/jurnal/list_jurnal.html";
+    console.log("berhasil");
+  } else {
+    // alert("Gagal menyimpan");
+    console.log("gagal");
+  }
 }

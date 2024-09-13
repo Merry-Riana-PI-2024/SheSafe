@@ -5,8 +5,20 @@ function loadPage(page, element) {
     .then((response) => {
       return response.text(); // Mendapatkan konten sebagai teks karena html
     })
+
     .then((data) => {
-      document.getElementById("content-jurnal").innerHTML = data;
+      // document.getElementById("content-jurnal").innerHTML = data;
+      const contentElement = document.getElementById("content-jurnal");
+      if (contentElement) {
+        contentElement.innerHTML = data;
+
+        // Memanggil fungsi yang sesuai untuk menampilkan data
+        if (page === "my_jurnal") {
+          displayJournalEntries(); // Menampilkan data jurnal
+        } else if (page === "pengajuan_kasus") {
+          // Panggil fungsi lain untuk halaman lain jika perlu
+        }
+      }
     })
     .catch((error) => {
       document.getElementById("content-jurnal").innerHTML =
@@ -26,3 +38,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const defaultPage = document.getElementById("my_jurnal_nav");
   loadPage("my_jurnal", defaultPage);
 });
+
+// const observer = new MutationObserver((mutations) => {
+//   mutations.forEach((mutation) => {
+//     if (mutation.type === "childList") {
+//       const content_myjurnal = document.getElementById("myjurnal-sections");
+//       if (content_myjurnal) {
+//         displayJournalEntries();
+//         observer.disconnect();
+//       }
+//     }
+//   });
+// });
+
+// observer.observe(document.body, { childList: true, subtree: true });
