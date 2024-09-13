@@ -1,0 +1,338 @@
+:root {
+    --primary-color: #04395e;
+    --secondary-color: #ba324f;
+    --light-primary: #f2f5f7;
+    --light-secondary: #f8ebed;
+    --dark-primary: #032b47;
+    --dark-secondary: #8c263b;
+    --light-grey: #8c8c8c;
+    --dark-black: #000000;
+    --white: #ffffff;
+}
+
+body {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper-mobile {
+    max-width: 375px !important;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.title-judul {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+.nav-tabs-container {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.nav-tabs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-tabs .nav-item {
+    flex: 1; 
+}
+
+.nav-tabs .nav-link {
+    border: 1px solid rgba(4, 57, 94, 1);
+    color: #ffffff;
+    background-color: #003366;
+    padding: 10px 15px;
+    text-align: center; 
+    width: 100%; 
+    border-radius:  0 0 5px 5px;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #ffffff; 
+    color: #003366;
+    border-color: #003366; 
+}
+
+.nav-tabs .nav-item {
+    margin-right: 5px;
+}
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    margin: 0;
+    font-size: 14px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.btn-pilih-tanggal {
+    background-color: #c13b53;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-pilih-tanggal:hover {
+    background-color: #a12e42;
+}
+
+.icon-tanggal {
+    width: 8px;
+    height: 6px;
+}
+
+.date-picker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+
+
+.card-header {
+    background: #ececec;
+    padding: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    gap: 10px;
+}
+
+.date-label {
+    margin-right: 0; 
+}
+
+.status-label {
+    margin-right: 0;
+}
+
+.draft-label {
+    margin-left: auto; 
+}
+
+
+.card-container {
+    width: 387px;
+    height: 275px;
+    margin: 20px auto;
+    background: transparent;
+}
+
+
+.card {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(192, 206, 215, 1); 
+    border-radius: 10px; 
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    margin-bottom: 20px;
+}
+
+
+.card-header {
+    background: rgba(255, 255, 255, 1);
+    border-left: none; 
+    border-right: none; 
+    border-top: none; 
+    border-bottom: none; 
+    border-radius: 10px 10px 0 0; 
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+.card-body {
+    padding: 15px;
+    height: 0px;
+    font-size: 14px;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #666;
+    flex-grow: 1;
+    border: none; 
+    display: flex;
+    flex-direction: column;
+}
+
+
+.card-footer {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-top: none; 
+    border-radius: 0 0 10px 10px; 
+}
+
+
+.date-label {
+    width: auto;
+    height: 30px;
+    padding: 8px 9px;
+    border-radius: 5px 5px 5px 5px;
+    background: rgba(230, 235, 239, 1);
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 13.64px;
+    color: rgba(4, 57, 94, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.status-label {
+    width: auto;
+    height: 30px;
+    padding: 8px 9px;
+    border-radius: 5px 5px 5px 5px;
+    background: rgba(248, 235, 237, 1);
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 13.64px;
+    color: rgba(186, 50, 79, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.draft-label {
+    width: auto;
+    height: 30px;
+    padding: 8px 9px;
+    border-radius: 5px 5px 5px 5px;
+    background: rgba(248, 244, 235, 1);
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 13.64px;
+    color: rgba(186, 140, 50, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-body {
+    padding: 15px;
+    font-size: 14px;
+    color: #666;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-body p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.card-footer {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.btn-edit, .btn-delete {
+    padding: 10px;
+    justify-content: center;
+    border-radius: 5px;
+    width: 70px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    border: none;
+}
+
+.btn-edit {
+    background-color: #E4EBF6;
+    color: #2D6BC2;
+}
+
+.btn-delete {
+    background-color: #FDECEC;
+    color: #D05C67;
+}
+
+
+.icon-img {
+    width: 20px;
+    height: 20px;
+    margin-right: 0px;
+}
+
+
+  
+h3 {
+    font-family: Nunito Sans;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21.82px;
+    text-align: left;
+    color: rgba(0, 0, 0, 1);
+}
+  
+p {
+    color: rgba(0, 0, 0, 1);
+    margin-bottom: 20px;
+    font-family: Nunito Sans;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 16.37px;
+    text-align: left;
+}
+  
+#nav-bottom {
+    margin-top: 20px; 
+}

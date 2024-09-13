@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
   $(".cases-content").slick({
     slidesToShow: 2,
     slidesToScroll: 1,
@@ -38,3 +39,4 @@ window.onload = function () {
     // document.getElementById('welcome-message').innerText = `Welcome, ${username}!`;
   }
 };
+
