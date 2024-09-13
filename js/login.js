@@ -24,6 +24,7 @@ let users = [
 
 const api = "https://66dfecb22fb67ac16f279532.mockapi.io/Shesafe/users";
 
+
 async function login() {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;

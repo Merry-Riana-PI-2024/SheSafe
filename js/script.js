@@ -59,6 +59,7 @@ function closePopupOnClickOutside(event) {
     // Hapus event listener setelah popup tertutup
     document.removeEventListener("click", closePopupOnClickOutside);
   }
+
 }
 
 function add_jurnal_page() {
