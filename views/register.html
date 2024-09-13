@@ -12,69 +12,112 @@
       crossorigin="anonymous" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link href="/css/style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/loginRegister.css">
+    <link rel="stylesheet" href="/css/loginRegister.css" />
   </head>
   <body>
-    <div class="wrapper-mobile min-vh-100">
-      <div id="navigation"></div>
-
+    <div id="navigation"></div>
+    <div class="register-content container wrapper-mobile min-vh-100">
       <div class="row justify-content-center align-items-center">
         <div class="featured-image">
-            <img src="/foto/lg_ss.png" class="img-fluid">
+          <img src="/foto/lg_ss.png" class="img-fluid" />
         </div>
         <div class="row align-items-center">
-            <div class="header-text mb-4 ">
-                <h1>Daftar Akun</h1>
-                <p class="desc">Ruang Aman untuk Pemberdayaan dan Keadilan Perempuan</p>
+          <div class="header-text mb-4">
+            <h1>Daftar Akun</h1>
+            <p class="desc">
+              Ruang Aman untuk Pemberdayaan dan Keadilan Perempuan
+            </p>
+          </div>
+          <form id="regist-form">
+            <div class="mb-3">
+              <label for="nama" class="form-label">Nama Lengkap</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nama"
+                placeholder="Nama Lengkap" />
             </div>
-            <form>
-                <div class="mb-3">
-                  <label for="nama" class="form-label">Nama Lengkap</label>
-                  <input type="text" class="form-control" id="nama" placeholder="Nama Lengkap">
-                </div>
-                <div class="mb-3 inline-form">
-                    <div class="spaceinput">
-                        <label for="gender" class="form-label">Jenis Kelamin</label>
-                        <input type="text" class="form-control" id="gender" placeholder="Jenis Kelamin">
-                    </div>
-                    <div class="spaceinput">
-                        <label for="ttl" class="form-label">Tanggal Lahir</label>
-                        <input type="date" class="form-control" id="ttl" placeholder="dd/mm/yyy">
-                    </div>
-                </div>
-                <div class="mb-1">
-                    <label for="identitas" class="form-label">Bukti Identitas</label>
-                    <input type="file" class="form-control" id="identitas" placeholder="Password">
-                </div>
-                <small>**Maximum file 2mb</small>
-                <div class="mb-3 mt-3">
-                  <label for="password" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="password" placeholder="Password">
-                </div>
-                <div class="mb-3">
-                  <label for="password" class="form-label">Konfirmasi Password</label>
-                  <input type="password" class="form-control" id="password" placeholder="Konfirmasi Password">
-                </div>
-                <div class="input-group mb-5 mt-5 d-flex justify-content-center align-items-center">
-                    <button class="lg-btn-primary">Daftar</button>
-                </div>
-            </form>
 
-            <!--Asset Foto-->
-            <div class="hero-img mt-5">
-                <img class="img-fluid img-1" src="/foto/asset_1.png" />
+            <div class="mb-3 inline-form col-12">
+              <div class="spaceinput">
+                <label for="gender" class="form-label fw-bold"
+                  >Jenis Kelamin</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="gender"
+                  name="gender"
+                  placeholder="Jenis Kelamin"
+                  required />
+              </div>
+              <div class="spaceinput col-6">
+                <label for="ttl" class="form-label fw-bold"
+                  >Tanggal Lahir</label
+                >
+                <input
+                  type="date"
+                  class="form-control"
+                  id="ttl"
+                  name="birth_date"
+                  placeholder="dd/mm/yyy"
+                  required />
+              </div>
             </div>
-  
-            <div class="hero-img">
-                <img class="img-fluid img-2" src="/foto/asset_2.png" />
+
+            <div class="mb-1">
+              <label for="identitas" class="form-label">Bukti Identitas</label>
+              <input
+                type="file"
+                class="form-control"
+                id="identitas"
+                placeholder="Password" />
             </div>
-            <!--Asset Foto END-->
+
+            <small>**Maximum file 2mb</small>
+            <div class="mb-3 mt-3">
+              <label for="password" class="form-label">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                placeholder="Password" />
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label"
+                >Konfirmasi Password</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                placeholder="Konfirmasi Password" />
+            </div>
+            <div
+              class="input-group mb-3 mt-5 d-flex justify-content-center align-items-center">
+              <button class="lg-btn-primary">Daftar</button>
+            </div>
+
+            <div class="row">
+              <small class="text-wrap text-center"
+                >Sudah Punya Akun?
+                <a class="fw-bold" href="/views/login.html">Masuk</a></small
+              >
+            </div>
+          </form>
         </div>
-        
-      
+      </div>
+    </div>
+    <div class="wrapper-mobile img-login-container">
+      <div class="image-login">
+        <img src="/foto/asset_login.png" class="img-fluid" />
+      </div>
+      <div class="footer">
+        <h6>Copyright 2024 SheSafe. All Rights Reserved</h6>
+      </div>
     </div>
   </body>
-  <script src="../js/script.js"></script>
+  <script src="/js/script.js"></script>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

@@ -101,5 +101,10 @@ label {
 }
 
 .spaceinput {
-  margin-right: 20px;
+  /* margin-right: 20px; */
+}
+
+.register-content {
+  background-color: white;
+  padding-top: 5rem;
 }
