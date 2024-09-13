@@ -22,15 +22,17 @@ let users = [
   },
 ];
 
-let api = "https://66dfecb22fb67ac16f279532.mockapi.io/Shesafe/users";
+const api = "https://66dfecb22fb67ac16f279532.mockapi.io/Shesafe/users";
+
+
 async function login() {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
   try {
     //kalo pake api
-    // let response = await fetch(users);
-    // let users = await response.json();
+    let response = await fetch(api);
+    let users = await response.json();
 
     const user = users.find(
       (user) =>

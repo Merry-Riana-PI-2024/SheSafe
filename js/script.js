@@ -61,3 +61,18 @@ function closePopupOnClickOutside(event) {
   }
 
 }
+
+function add_jurnal_page() {
+  const url = "/views/jurnal/addJurnal.html";
+  window.location.href = url;
+}
+
+function home_page() {
+  const url = "/views/home.html";
+  window.location.href = url;
+}
+
+function jurnal_page() {
+  const url = "/views/jurnal/list_jurnal.html";
+  window.location.href = url;
+}
