@@ -1,33 +1,30 @@
-:root {
-    --primary-color: #04395e;
-    --secondary-color: #ba324f;
-    --light-primary: #f2f5f7;
-    --light-secondary: #f8ebed;
-    --dark-primary: #032b47;
-    --dark-secondary: #8c263b;
-    --light-grey: #8c8c8c;
-    --dark-black: #000000;
-    --white: #ffffff;
-}
-
-body {
-    font-size: 12px;
-}
-  
 .wrapper-mobile {
-    max-width: 375px !important;
-    width: 375px;
-    margin: 0 auto;
+    background-color: var(--white);
+  }
+  
+.featured-image img{
+    width: 120px;
+    margin: 20px 0 0 0;
 }
-
 
 .header{
-    margin-bottom: 50px;
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    margin: auto 20%;
+}
+
+.header a{
+    color: var(--secondary-color);
+    font-weight: 500;
+    font-size: 22px;
+    text-decoration: none;
+    padding-right: 10%;
 }
 
 h1{
-    font-size: 20px;
-    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
 }
 
 .form-control {
@@ -39,20 +36,20 @@ h1{
 
 ::placeholder{
     font-size: 14px;
-    padding-left: 10px;
     color: var(--light-grey);
 }
 
 label{
     color: var(--primary-color);
-    font-weight: 500;
+    font-weight: 700;
+    font-size: 14px;
 }
 
 small{
-    color: var(--secondary-color);
-    font-weight: 500;
-    font-size: smaller;
     display: block;
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 11px;
 }
 
 .form-block{
@@ -61,8 +58,12 @@ small{
 
 .inline-form{
     display: inline-flex;
-    width: 40%;
-    justify-content: space-between;
+    width: 45%;
+}
+
+p{
+    display: inline;
+    margin: auto 15px;
 }
 
 textarea{
@@ -72,26 +73,29 @@ textarea{
 
 /*---------------Button-------------*/
 .sm-btn-secondary {
-    display: inline-flex;
-    padding: 10px 24px;
-    justify-content: center;
-    align-items: center;
-    gap: 14px;
-    border-radius: 10px;
-    background: var(--secondary-color);
-    color: var(--white);
     border: none;
     margin: 20px 0;
 }
 
 .lg-btn-primary {
-    display: inline-flex;
-    padding: 10px 40px;
-    justify-content: center;
-    align-items: center;
-    gap: 14px;
-    border-radius: 10px;
-    background: var(--dark-primary);
-    color: var(--white);
     border: none;
+}
+
+
+/*-----------------Image Asset-------------*/
+.hero-img .img-2 {
+    position: inherit;
+    /* top: 0; */
+    margin-top: -18rem;
+    z-index: -1;
+    width: 100%;
+}
+  
+.hero-img .img-1 {
+    z-index: 20;
+    width: 100%;
+}
+
+.hero-img{
+    margin-bottom: -1.3vh;
 }
