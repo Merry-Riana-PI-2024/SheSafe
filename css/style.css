@@ -1,7 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 :root {
   --primary-color: #04395e;
   --secondary-color: #ba324f;
-  --light-primary: #f2f5f7;
+  --light-primary: #d9e1e7;
   --light-secondary: #f8ebed;
   --dark-primary: #032b47;
   --dark-secondary: #8c263b;
@@ -12,21 +13,22 @@
 
 body {
   font-size: 12px;
+  background-color: var(--light-secondary);
+  font-family: "Nunito Sans" !important;
 }
 
 .wrapper-mobile {
-  max-width: 375px !important;
-  width: 375px;
+  width: 480px;
   margin: 0 auto;
+  /* background-color: var(--white); */
+  /* padding: 0 1rem; */
 }
 
 /* style navigation landing page */
 
 .navigation {
-  /* background-color: var(--bg-primary-color); */
-  background-color: #1c1c1c;
   background-size: cover;
-  max-width: 100%;
+  max-width: inherit;
   display: flex;
   justify-content: center;
 }
@@ -42,9 +44,9 @@ body {
   position: fixed;
   top: 0;
   z-index: 1000;
-  max-width: 100%;
-  width: 1200px;
+  width: 420px;
   margin: 0.5rem 0.5rem;
+  gap: 8px;
 }
 
 .navbar-links ul {
@@ -154,7 +156,11 @@ body {
 
 @media (max-width: 576px) {
   .wrapper-mobile {
-    max-width: 375px; /* Lebar maksimal container selebar ponsel */
+    max-width: 385px; /* Lebar maksimal container selebar ponsel */
+  }
+
+  .navbar {
+    max-width: 385px;
   }
 }
 /* style navigation landing page */
@@ -169,6 +175,7 @@ body {
   border-radius: 10px;
   background: var(--primary-color);
   color: var(--white);
+  text-decoration: none;
 }
 
 .sm-btn-secondary {
@@ -180,6 +187,7 @@ body {
   border-radius: 10px;
   background: var(--secondary-color);
   color: var(--white);
+  text-decoration: none;
 }
 
 .lg-btn-primary {
@@ -191,6 +199,7 @@ body {
   border-radius: 10px;
   background: #04395e;
   color: var(--white);
+  text-decoration: none;
 }
 
 .lg-btn-secondary {
@@ -202,6 +211,7 @@ body {
   border-radius: 10px;
   background: var(--secondary-color);
   color: var(--white);
+  text-decoration: none;
 }
 
 .sm-btn-primary a {
@@ -213,4 +223,47 @@ body {
   text-decoration: none;
   color: white;
 }
+
+.lg-btn-primary a {
+  text-decoration: none;
+  color: white;
+}
+
+.lg-btn-secondary a {
+  text-decoration: none;
+  color: white;
+}
+
+.lg-btn-primary:hover {
+  color: white;
+}
+
+.lg-btn-secondary:hover {
+  color: white;
+}
+
+.sm-btn-primary:hover {
+  color: white;
+}
+
+.sm-btn-secondary:hover {
+  color: white;
+}
+
 /* style button */
+
+/* footer */
+.footer {
+  /* margin-top: 3rem; */
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 24px 24px;
+}
+
+.footer p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto !important;
+}
