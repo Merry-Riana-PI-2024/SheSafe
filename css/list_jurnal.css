@@ -114,3 +114,27 @@
 #content-jurnal {
   padding-bottom: 6rem;
 }
+
+.btn-edit,
+.btn-delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 3px 29px;
+  background: none;
+  position: relative;
+  cursor: pointer;
+  font-size: 16px;
+  width: 73px;
+  height: 30px;
+}
+
+.btn-edit {
+  border-color: rgba(4, 57, 94, 1);
+}
+
+.btn-delete {
+  border-color: rgba(186, 50, 79, 1);
+}

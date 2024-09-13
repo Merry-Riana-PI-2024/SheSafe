@@ -26,8 +26,13 @@ function displayJournalEntries() {
               </div>
               <div class="myjurnal-bottom-content">
                   <div class="myjurnal-buttons d-flex justify-content-between">
-                      <button onclick="editEntry(${entry.id})">Edit</button>
-                      <button onclick="deleteEntry(${entry.id})">Hapus</button>
+                  <button class="btn-edit">
+              <img src="/foto/edit.png" alt="Edit" class="icon-img" />
+            </button>
+                        <button class="btn-delete">
+              <img src="/foto/hapus.png" alt="Hapus" class="icon-img" />
+            </button>
+            
                   </div>
               </div>
           </div>
@@ -36,3 +41,7 @@ function displayJournalEntries() {
 }
 
 document.addEventListener("DOMContentLoaded", displayJournalEntries);
+
+function viewDetail(id) {
+  window.location.href = `/views/jurnal/detailJurnal.html?id=${id}`;
+}

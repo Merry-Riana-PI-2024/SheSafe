@@ -103,6 +103,26 @@ function add_jurnal() {
     ? document.getElementById("journalId").value
     : ""; // Pastikan journalId ada
 
+  if (!title) {
+    alert("Judul Jurnal tidak boleh kosong");
+    return;
+  }
+
+  if (!start_date && !end_date) {
+    alert("Tanggal Kejadian tidak boleh kosong");
+    return;
+  }
+
+  if (!klasifikasi) {
+    alert("Klasifikasi Kasus tidak boleh kosong");
+    return;
+  }
+
+  if (!desc) {
+    alert("Ringkasan Kejadian tidak boleh kosong");
+    return;
+  }
+
   const newId = save_jurnal(
     id,
     title,
@@ -116,12 +136,6 @@ function add_jurnal() {
   );
 
   if (newId) {
-    console.log("Data berhasil disimpan dengan ID:", newId);
-    // Kosongkan form setelah berhasil
-    document.getElementById("form_addjurnal").reset();
-    // Kosongkan ID
-    document.getElementById("journalId").value = "";
-    // Redirect ke halaman list_jurnal.html
     window.location.href = "/views/jurnal/list_jurnal.html";
   } else {
     // alert("Gagal menyimpan");
