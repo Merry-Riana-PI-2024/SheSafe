@@ -26,10 +26,12 @@ function displayJournalEntries() {
               </div>
               <div class="myjurnal-bottom-content">
                   <div class="myjurnal-buttons d-flex justify-content-between">
-                  <button class="btn-edit">
+                  <button class="btn-edit" onclick="editJurnal(${entry.id})">
               <img src="/foto/edit.png" alt="Edit" class="icon-img" />
             </button>
-                        <button class="btn-delete">
+                        <button class="btn-delete" onclick="hapusJurnal(${
+                          entry.id
+                        })">
               <img src="/foto/hapus.png" alt="Hapus" class="icon-img" />
             </button>
             
@@ -44,4 +46,30 @@ document.addEventListener("DOMContentLoaded", displayJournalEntries);
 
 function viewDetail(id) {
   window.location.href = `/views/jurnal/detailJurnal.html?id=${id}`;
+}
+
+function editJurnal(id) {
+  window.location.href = `/views/jurnal/edit_jurnal.html?id=${id}`;
+}
+
+function hapusJurnal(id) {
+  // Ambil data jurnal dari localStorage
+  let journals = JSON.parse(localStorage.getItem("my_jurnal")) || [];
+
+  // Temukan indeks jurnal yang akan dihapus
+  const index = journals.findIndex((j) => j.id == id);
+
+  if (index > -1) {
+    // Hapus jurnal dari array
+    journals.splice(index, 1);
+
+    // Simpan kembali data jurnal ke localStorage
+    localStorage.setItem("my_jurnal", JSON.stringify(journals));
+    alert("Jurnal berhasil dihapus!");
+
+    // Redirect ke halaman list jurnal setelah menghapus
+    window.location.href = "list_jurnal.html";
+  } else {
+    alert("Jurnal tidak ditemukan.");
+  }
 }

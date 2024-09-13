@@ -75,10 +75,10 @@ function displayJournalDetail() {
        <div class="action-container">
           <span id="date-label" class="date-label">${journal.currentDate}</span>
           <div class="button-action-detail d-flex gap-2">
-            <button class="btn-delete">
+            <button class="btn-delete" onclick="hapusJurnal(${journal.id})">
               <img src="/foto/hapus.png" alt="Hapus" class="icon-img" />
             </button>
-            <button class="btn-edit">
+            <button class="btn-edit" onclick="editJurnal(${journal.id})">
               <img src="/foto/edit.png" alt="Edit" class="icon-img" />
             </button>
           </div>
