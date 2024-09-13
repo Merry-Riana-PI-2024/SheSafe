@@ -24,13 +24,13 @@
             </a>
           <h1 class="text-align-center col-10 align-items-center">Formulir Jurnal Baru</h1>
         </div>
-        <form>
+        <form id="form_addjurnal">
           <div class="mb-1">
             <label for="judulJurnal" class="form-label">Judul Jurnal</label>
             <input
               type="text"
               class="form-control"
-              id="judulJurnal"
+              id="judul-jurnal"
               placeholder="Masukkan Judul Jurnal Anda" />
           </div>
           <small>**Pilih judul yang mencerminkan isi jurnal dengan jelas</small>
@@ -45,7 +45,7 @@
                 <input
                   type="date"
                   class="form-control inline-form"
-                  id="tkejadian"
+                  id="start-date"
                   placeholder="dd/mm/yyy" />
               </div>
               <div class="col-2 d-flex justify-content-center">
@@ -55,7 +55,7 @@
                 <input
                   type="date"
                   class="form-control inline-form"
-                  id="tkejadian"
+                  id="end-date"
                   placeholder="dd/mm/yyy" />
               </div>
             </div>
@@ -96,7 +96,7 @@
             <input
             type="file"
             class="form-control"
-            id="identitas"
+            id="bukti_file"
             placeholder="Password" />
             <button type="button" class="file-upload-button sm-btn-secondary">
               + Bukti
@@ -109,7 +109,7 @@
           </div>
           <div
             class="input-group mb-3 d-flex justify-content-center align-items-center">
-            <button class="lg-btn-primary mt-5">Simpan Jurnal</button>
+            <button type="submit" onclick="add_jurnal()"class="lg-btn-primary mt-5">Simpan Jurnal</button>
           </div>
         </form>
       </div>
@@ -120,5 +120,8 @@
         <img src="/foto/asset_login.png" class="img-fluid" />
       </div>
     </div>
+
   </body>
+  <script src="../js/script.js"></script>
+
 </html>

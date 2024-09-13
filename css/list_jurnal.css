@@ -1,0 +1,112 @@
+.content-list-jurnal {
+  background: white;
+}
+
+.myjurnal-navigation {
+  display: inline-flex;
+  width: 100%;
+}
+
+.myjurnal-button.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  border-radius: 0px 0px 10px 10px;
+  color: white !important;
+  padding: 12px 24px;
+  width: 100%;
+}
+
+.pengajuan-button.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  border-radius: 0px 0px 10px 10px;
+  color: white !important;
+  padding: 12px 24px;
+  width: 100%;
+}
+
+.myjurnal-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 0px 0px 10px 10px;
+  color: var(--primary-color) !important;
+  padding: 12px 24px;
+  width: 100%;
+  border: 1px solid var(--primary-color);
+}
+
+.pengajuan-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 0px 0px 10px 10px;
+  color: var(--primary-color) !important;
+  padding: 12px 24px;
+  width: 100%;
+  border: 1px solid var(--primary-color);
+}
+
+.heading-myjurnal {
+  margin: auto 1rem;
+  padding-top: 2rem;
+}
+
+.heading-myjurnal .heading h5 {
+  font-weight: bolder;
+}
+.myjurnal-section {
+  margin: 1rem 1rem;
+}
+
+.myjurnal-top-content {
+  border-radius: 10px 10px 0px 0px;
+  border: 1px solid #c0ced7;
+  background: #fff;
+  padding: 12px 24px;
+}
+
+.myjurnal-bottom-content {
+  border-radius: 0px 0px 10px 10px;
+  border: 1px solid #c0ced7;
+  background: var(--light-primary);
+  padding: 12px 24px;
+}
+
+.myjurnal-desc h6 {
+  font-weight: bold;
+}
+
+.myjurnal-label {
+  display: inline-flex;
+  gap: 10px;
+  margin: 1rem auto;
+}
+
+.myjurnal-label .date {
+  background-color: var(--light-primary);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark-primary);
+  border-radius: 5px;
+  gap: 10px;
+  padding: 8px;
+}
+
+.myjurnal-label .info {
+  background-color: var(--light-secondary);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark-secondary);
+  border-radius: 5px;
+  gap: 10px;
+  padding: 8px;
+}
