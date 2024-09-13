@@ -63,6 +63,8 @@ function save_jurnal(
 }
 
 function add_jurnal() {
+  console.log("add_jurnal function called");
+
   // Daftar nama bulan dalam bahasa Indonesia
   const bulanIndo = [
     "Januari",
@@ -114,10 +116,13 @@ function add_jurnal() {
   );
 
   if (newId) {
-    // document.getElementById("form_addjurnal").reset(); // Kosongkan form setelah berhasil
-    // document.getElementById("journalId").value = ""; // Kosongkan ID
+    console.log("Data berhasil disimpan dengan ID:", newId);
+    // Kosongkan form setelah berhasil
+    document.getElementById("form_addjurnal").reset();
+    // Kosongkan ID
+    document.getElementById("journalId").value = "";
+    // Redirect ke halaman list_jurnal.html
     window.location.href = "/views/jurnal/list_jurnal.html";
-    console.log("berhasil");
   } else {
     // alert("Gagal menyimpan");
     console.log("gagal");

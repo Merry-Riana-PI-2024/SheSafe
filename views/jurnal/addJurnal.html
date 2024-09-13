@@ -24,7 +24,7 @@
             </a>
           <h1 class="text-align-center col-10 align-items-center">Formulir Jurnal Baru</h1>
         </div>
-        <form id="form_addjurnal">
+        <form id="form_addjurnal" method="post">
           <input type="hidden" id="journalId">
           <div class="mb-1">
             <label for="judulJurnal" class="form-label">Judul Jurnal</label>
@@ -110,7 +110,7 @@
           </div>
           <div
             class="input-group mb-3 d-flex justify-content-center align-items-center">
-            <button onclick="add_jurnal()"class="lg-btn-primary mt-5">Simpan Jurnal</button>
+            <button type="button" onclick="add_jurnal()"class="lg-btn-primary mt-5">Simpan Jurnal</button>
           </div>
         </form>
       </div>

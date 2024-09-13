@@ -1,6 +1,12 @@
 function displayJournalEntries() {
   const journals = JSON.parse(localStorage.getItem("my_jurnal")) || [];
   const content_myjurnal = document.getElementById("myjurnal-sections");
+
+  // Cek jika ada elemen info-jurnal dan tambahkan pesan jika belum ada jurnal
+  const info = document.getElementById("info-jurnal");
+  if (journals.length === 0 && info) {
+    info.innerHTML = "<h4>Belum Ada Jurnal</h4>";
+  }
   content_myjurnal.innerHTML = "";
 
   journals.forEach((entry) => {
