@@ -76,3 +76,8 @@ function jurnal_page() {
   const url = "/views/jurnal/list_jurnal.html";
   window.location.href = url;
 }
+
+function akun_page() {
+  const url = "/views/akun/logout-btn.html";
+  window.location.href = url;
+}
