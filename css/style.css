@@ -12,7 +12,7 @@
 }
 
 body {
-  font-size: 12px;
+  font-size: 14px !important;
   background-color: var(--light-secondary);
   font-family: "Nunito Sans" !important;
 }
@@ -251,3 +251,19 @@ body {
 }
 
 /* style button */
+
+/* footer */
+.footer {
+  /* margin-top: 3rem; */
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 24px 24px;
+}
+
+.footer p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto !important;
+}
