@@ -20,6 +20,7 @@ function loadJournalForEdit() {
     document.getElementById("end-date").value = journal.end_date;
     document.getElementById("klasifikasikasus").value = journal.klasifikasi;
     document.getElementById("descKejadian").value = journal.desc;
+    document.getElementById("kroKejadian").value = journal.kro;
   } else {
     alert("Jurnal tidak ditemukan.");
     window.location.href = "list_jurnal.html"; // Redirect jika jurnal tidak ditemukan
@@ -39,6 +40,7 @@ function update_jurnal() {
   const end_date = document.getElementById("end-date").value;
   const klasifikasi = document.getElementById("klasifikasikasus").value;
   const desc = document.getElementById("descKejadian").value;
+  const kro = document.getElementById("dkroKejadian").value;
   const fileInput = document.getElementById("bukti_file");
   const file = fileInput.files[0]; // Ambil file yang dipilih
 
@@ -57,6 +59,7 @@ function update_jurnal() {
       end_date,
       klasifikasi,
       desc,
+      kro,
       fileName: file ? file.name : journals[index].fileName, // Perbarui file jika ada, jika tidak biarkan
       currentDate,
       active,

@@ -8,6 +8,11 @@
   color: black; */
 }
 
+.header {
+  position: relative;
+  top: 0;
+}
+
 h1 {
   font-size: 20px;
   text-align: center;

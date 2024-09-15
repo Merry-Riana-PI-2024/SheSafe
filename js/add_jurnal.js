@@ -26,6 +26,7 @@ function save_jurnal(
   end_date,
   klasifikasi,
   desc,
+  kro,
   file,
   currentDate,
   active
@@ -40,6 +41,7 @@ function save_jurnal(
     end_date,
     klasifikasi,
     desc,
+    kro,
     fileName, // Simpan nama file, bukan objek file
     currentDate,
     active,
@@ -97,6 +99,8 @@ function add_jurnal() {
   const end_date = document.getElementById("end-date").value;
   const klasifikasi = document.getElementById("klasifikasikasus").value;
   const desc = document.getElementById("descKejadian").value;
+  const kro = document.getElementById("kroKejadian").value;
+
   const fileInput = document.getElementById("bukti_file");
   const file = fileInput ? fileInput.files[0] : null; // Pastikan fileInput ada
   const id = document.getElementById("journalId")
@@ -114,11 +118,16 @@ function add_jurnal() {
   }
 
   if (!klasifikasi) {
-    alert("Klasifikasi Kasus tidak boleh kosong");
+    alert("Kategori Kejadian tidak boleh kosong");
     return;
   }
 
   if (!desc) {
+    alert("Ringkasan Kejadian tidak boleh kosong");
+    return;
+  }
+
+  if (!kro) {
     alert("Ringkasan Kejadian tidak boleh kosong");
     return;
   }
@@ -130,6 +139,7 @@ function add_jurnal() {
     end_date,
     klasifikasi,
     desc,
+    kro,
     file,
     currentDate,
     active
