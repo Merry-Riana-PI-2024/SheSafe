@@ -49,19 +49,18 @@
             </div>
 
             <div class="mb-3 inline-form col-12">
-              <div class="spaceinput">
+              <div class="spaceinput col-6 px-1">
                 <label for="gender" class="form-label fw-bold"
                   >Jenis Kelamin</label
                 >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="gender"
-                  name="gender"
-                  placeholder="Jenis Kelamin"
-                  required />
+                <select class="form-control" name="gender" id="gender" required>
+                  <option value="">Pilih Jenis Kelamin</option>
+                  <option value="Perempuan">Perempuan</option>
+                  <option value="laki-laki">Laki-laki</option>
+                </select>
               </div>
-              <div class="spaceinput col-6">
+
+              <div class="spaceinput col-6 px-1">
                 <label for="ttl" class="form-label fw-bold"
                   >Tanggal Lahir</label
                 >
@@ -104,16 +103,21 @@
                 placeholder="Konfirmasi Password" />
             </div>
             <div
-              class="input-group mb-3 mt-5 d-flex justify-content-center align-items-center">
+              class="input-group mb-4 mt-5 d-flex justify-content-center align-items-center">
               <button type="button" class="lg-btn-primary" onclick="regist()">
                 Daftar
               </button>
             </div>
 
-            <div class="row">
-              <small class="text-wrap text-center"
+            <div class="d-flex justify-content-center align-items-center gap-1">
+              <small class="text-wrap text-center" style="font-size: 14px"
                 >Sudah Punya Akun?
-                <a class="fw-bold" href="/views/login.html">Masuk</a></small
+              </small>
+              <a
+                href="/views/login.html"
+                class="fw-bold"
+                style="font-size: 14px"
+                >Masuk</a
               >
             </div>
           </form>

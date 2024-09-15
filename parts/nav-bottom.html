@@ -1,8 +1,8 @@
 <div class="wrapper-mobile">
   <div class="navigation-container-bottom">
-    <div class="navigation-bottom">
+    <div class="navigation-bottom" id="navigation-bottom">
       <!-- <div class="navbar-botttom"> -->
-      <div class="nav-content active" onclick="home_page()">
+      <!-- <div class="nav-content active" onclick="home_page()">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="33"
@@ -86,7 +86,7 @@
             stroke-width="1.5" />
         </svg>
         <p>Akun</p>
-      </div>
+      </div>  -->
       <!-- </div> -->
     </div>
   </div>
@@ -150,172 +150,170 @@
               fill="#BA324F" />
           </svg>
           <p>Buat Jurnal</p>
-
         </div>
       </div>
     </div>
   </div>
 
+  <style>
+    .navigation-container-bottom {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* width: 480px; */
+      /* max-width: inherit; */
+    }
 
-<style>
-  .navigation-container-bottom {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* width: 480px; */
-    /* max-width: inherit; */
-  }
+    .navigation-bottoms {
+      position: fixed;
+      bottom: 0;
+      display: flex;
+      /* padding: 24px 28px; */
+      padding: 8px 12px;
+      justify-content: space-around;
+      flex-direction: row;
+      width: 480px;
+      align-items: center;
+      /* gap: 24px; */
+      border-radius: 10px 10px 0px 0px;
+      background: #fff;
+      box-shadow: 0px -4px 10px 2px rgba(0, 0, 0, 0.1);
+      z-index: 80;
+    }
 
-  .navigation-bottoms {
-    position: fixed;
-    bottom: 0;
-    display: flex;
-    /* padding: 24px 28px; */
-    padding: 8px 12px;
-    justify-content: space-around;
-    flex-direction: row;
-    width: 480px;
-    align-items: center;
-    /* gap: 24px; */
-    border-radius: 10px 10px 0px 0px;
-    background: #fff;
-    box-shadow: 0px -4px 10px 2px rgba(0, 0, 0, 0.1);
-    z-index: 80;
-  }
+    .navigation-bottom {
+      position: fixed;
+      bottom: 0;
+      display: flex;
+      padding: 8px 12px;
+      justify-content: space-around;
+      flex-direction: row;
+      width: 480px;
+      align-items: center;
+      border-radius: 10px 10px 0px 0px;
+      background: #fff;
+      box-shadow: 0px -4px 10px 2px rgba(0, 0, 0, 0.1);
+      z-index: 80;
+    }
 
-  .navigation-bottom {
-    position: fixed;
-    bottom: 0;
-    display: flex;
-    padding: 8px 12px;
-    justify-content: space-around;
-    flex-direction: row;
-    width: 480px;
-    align-items: center;
-    border-radius: 10px 10px 0px 0px;
-    background: #fff;
-    box-shadow: 0px -4px 10px 2px rgba(0, 0, 0, 0.1);
-    z-index: 80;
-  }
-
-  .nav-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 8px auto;
-  }
-
-  .nav-content p {
-    margin-bottom: 0;
-  }
-
-  .pop-button {
-    display: flex;
-    width: 63px;
-    height: 63px;
-    padding: 16px 0px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 37px;
-    background: var(--secondary-color);
-  }
-
-  .nav-content p {
-    margin-top: 8px;
-    font-size: 1rem;
-    color: var(--light-grey);
-    font-weight: 700;
-  }
-
-  .nav-content.active p {
-    margin-top: 8px;
-    font-size: 1rem;
-    color: var(--secondary-color);
-    font-weight: 700;
-  }
-
-  @media (max-width: 576px) {
-    .navigation-bottom,
-    .popup-menu.show {
-      max-width: 375px;
+    .nav-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 8px auto;
     }
 
     .nav-content p {
-      font-size: 12px;
+      margin-bottom: 0;
+    }
+
+    .pop-button {
+      display: flex;
+      width: 63px;
+      height: 63px;
+      padding: 16px 0px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 37px;
+      background: var(--secondary-color);
+    }
+
+    .nav-content p {
+      margin-top: 8px;
+      font-size: 1rem;
+      color: var(--light-grey);
+      font-weight: 700;
     }
 
     .nav-content.active p {
-      font-size: 12px;
+      margin-top: 8px;
+      font-size: 1rem;
+      color: var(--secondary-color);
+      font-weight: 700;
     }
-  }
 
-  .popup-menu {
-    display: none;
-    position: fixed;
-    bottom: 0;
-    /* display: flex; */
-    padding: 24px 28px;
-    justify-content: center;
-    flex-direction: column;
-    width: 480px;
-    height: 350px;
-    align-items: center;
-    border-radius: 20px 20px 0px 0px;
-    background: #fff;
-    box-shadow: 0px -4px 10px 2px rgba(0, 0, 0, 0.1);
-  }
+    @media (max-width: 576px) {
+      .navigation-bottom,
+      .popup-menu.show {
+        max-width: 375px;
+      }
 
-  .popup-detail {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-    gap: 24px;
-    width: 100%;
-  }
+      .nav-content p {
+        font-size: 12px;
+      }
 
-  .popup-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* width: 480px; */
-    /* max-width: inherit; */
-  }
+      .nav-content.active p {
+        font-size: 12px;
+      }
+    }
 
-  .rectangle {
-    position: absolute;
-    top: 10px; /* Atur posisi atas rectangle */
-    /* Atur posisi kiri rectangle */
-    width: 93px;
-    height: 5px;
-    background: #f5f5f5;
-    border-radius: 20px;
-    color: white;
-    text-align: center;
-    line-height: 100px;
-    z-index: 1; /* Pastikan rectangle berada di atas elemen lain jika diperlukan */
-  }
-  .popup-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 8px auto;
-  }
+    .popup-menu {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      /* display: flex; */
+      padding: 24px 28px;
+      justify-content: center;
+      flex-direction: column;
+      width: 480px;
+      height: 350px;
+      align-items: center;
+      border-radius: 20px 20px 0px 0px;
+      background: #fff;
+      box-shadow: 0px -4px 10px 2px rgba(0, 0, 0, 0.1);
+    }
 
-  .popup-content p {
-    margin-top: 8px;
-    /* font-size: 1rem; */
-    /* color: var(--light-grey); */
-    font-weight: 700;
-    /* width: 97px; */
-    text-align: center;
-  }
+    .popup-detail {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+      gap: 24px;
+      width: 100%;
+    }
 
-  .popup-menu.show {
-    display: flex !important;
-    z-index: 100;
-  }
-</style>
+    .popup-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* width: 480px; */
+      /* max-width: inherit; */
+    }
 
+    .rectangle {
+      position: absolute;
+      top: 10px; /* Atur posisi atas rectangle */
+      /* Atur posisi kiri rectangle */
+      width: 93px;
+      height: 5px;
+      background: #f5f5f5;
+      border-radius: 20px;
+      color: white;
+      text-align: center;
+      line-height: 100px;
+      z-index: 1; /* Pastikan rectangle berada di atas elemen lain jika diperlukan */
+    }
+    .popup-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 8px auto;
+    }
+
+    .popup-content p {
+      margin-top: 8px;
+      /* font-size: 1rem; */
+      /* color: var(--light-grey); */
+      font-weight: 700;
+      /* width: 97px; */
+      text-align: center;
+    }
+
+    .popup-menu.show {
+      display: flex !important;
+      z-index: 100;
+    }
+  </style>
+</div>

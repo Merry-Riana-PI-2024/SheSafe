@@ -56,20 +56,31 @@ function hapusJurnal(id) {
   // Ambil data jurnal dari localStorage
   let journals = JSON.parse(localStorage.getItem("my_jurnal")) || [];
 
-  // Temukan indeks jurnal yang akan dihapus
-  const index = journals.findIndex((j) => j.id == id);
+  Swal.fire({
+    title: "Apakah kamu yakin ingin menghapus jurnal?",
+    showDenyButton: true,
+    confirmButtonText: "Ya",
+    denyButtonText: `tidak`,
+  }).then((result) => {
+    /* Read more about isConfirmed, isDenied below */
+    if (result.isConfirmed) {
+      const index = journals.findIndex((j) => j.id == id);
 
-  if (index > -1) {
-    // Hapus jurnal dari array
-    journals.splice(index, 1);
+      if (index > -1) {
+        // Hapus jurnal dari array
+        journals.splice(index, 1);
 
-    // Simpan kembali data jurnal ke localStorage
-    localStorage.setItem("my_jurnal", JSON.stringify(journals));
-    alert("Jurnal berhasil dihapus!");
+        // Simpan kembali data jurnal ke localStorage
+        localStorage.setItem("my_jurnal", JSON.stringify(journals));
 
-    // Redirect ke halaman list jurnal setelah menghapus
-    window.location.href = "list_jurnal.html";
-  } else {
-    alert("Jurnal tidak ditemukan.");
-  }
+        // Redirect ke halaman list jurnal setelah menghapus
+        window.location.href = "list_jurnal.html";
+      } else {
+        alert("Jurnal tidak ditemukan.");
+      }
+      Swal.fire("Saved!", "", "success");
+    } else if (result.isDenied) {
+      // Swal.fire("Tidak jadi dihapus", "", "info");
+    }
+  });
 }

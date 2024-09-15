@@ -110,16 +110,9 @@ function displayJournalDetail() {
             <h5>Kronologi Kejadian</h5>
 
             <div>
-              <div class="mb-2">
-                <span
-                  id="kronologi-date-1"
-                  class="date-label-kronologi-kejadian"></span>
-              </div>
+             
               <div class="deskripsi-kejadian">
-                <label class="form-label-dekripsi-kejadian"
-                  ><strong>Deskripsi Kejadian:</strong></label
-                >
-                <span id="desc-kejadian-1" class="text-muted"></span>
+                <p>${journal.kro}</p>
               </div>
             </div>
 
