@@ -40,7 +40,7 @@ function update_jurnal() {
   const end_date = document.getElementById("end-date").value;
   const klasifikasi = document.getElementById("klasifikasikasus").value;
   const desc = document.getElementById("descKejadian").value;
-  const kro = document.getElementById("dkroKejadian").value;
+  const kro = document.getElementById("kroKejadian").value;
   const fileInput = document.getElementById("bukti_file");
   const file = fileInput.files[0]; // Ambil file yang dipilih
 
