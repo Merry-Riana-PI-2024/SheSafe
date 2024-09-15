@@ -98,7 +98,7 @@ label {
 
 .inline-form {
   display: flex;
-  gap: 16px;
+  /* gap: px; */
 }
 
 .spaceinput {

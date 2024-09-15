@@ -49,19 +49,18 @@
             </div>
 
             <div class="mb-3 inline-form col-12">
-              <div class="spaceinput">
+              <div class="spaceinput col-6 px-1">
                 <label for="gender" class="form-label fw-bold"
                   >Jenis Kelamin</label
                 >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="gender"
-                  name="gender"
-                  placeholder="Jenis Kelamin"
-                  required />
+                <select class="form-control" name="gender" id="gender" required>
+                  <option value="">Pilih Jenis Kelamin</option>
+                  <option value="Perempuan">Perempuan</option>
+                  <option value="laki-laki">Laki-laki</option>
+                </select>
               </div>
-              <div class="spaceinput col-6">
+
+              <div class="spaceinput col-6 px-1">
                 <label for="ttl" class="form-label fw-bold"
                   >Tanggal Lahir</label
                 >
