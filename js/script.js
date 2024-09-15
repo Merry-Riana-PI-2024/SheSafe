@@ -59,7 +59,6 @@ function closePopupOnClickOutside(event) {
     // Hapus event listener setelah popup tertutup
     document.removeEventListener("click", closePopupOnClickOutside);
   }
-
 }
 
 function add_jurnal_page() {
@@ -80,4 +79,8 @@ function jurnal_page() {
 function akun_page() {
   const url = "/views/akun/logout-btn.html";
   window.location.href = url;
+}
+
+function landing_page() {
+  window.location.href = "/index.html";
 }
