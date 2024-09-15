@@ -69,7 +69,7 @@
               class="form-control"
               name="klasifikasikasus"
               id="klasifikasikasus" aria-placeholder="Pilih Kategori">
-              <option value="pilih">Pilih Kategori</option>
+              <option value="">Pilih Kategori</option>
               <option value="KDRT">KDRT</option>
               <option value="Kekerasan Fisik">Kekerasan Fisik</option>
               <option value="Kekerasan Verbal">Kekerasan Verbal</option>
@@ -83,7 +83,7 @@
           </div>
           <div class="mb-1">
             <label for="descKejadian" class="form-label fw-bold"
-              >Deskripsi Kejadian</label
+              >Ringkasan Kejadian</label
             >
             <textarea
               name="descKejadian"
@@ -96,6 +96,20 @@
             >**Hindari menggunakan nama asli atau informasi pribadi orang lain
             tanpa izin</small
           >
+
+          <div class="my-3">
+            <label for="descKejadian" class="form-label fw-bold"
+              >Kronologi Kejadian </label
+            >
+            <textarea
+              name="kroKejadian"
+              id="kroKejadian"
+              class="form-control"
+              placeholder="Sertakan Tanggal Kejadian dan Detail Kronologi Kejadian"
+              rows="2"></textarea>
+          </div>
+         
+
           <div class="mb-1 mt-3">
             <label for="file-upload" class="form-label  fw-bold custom-file-upload"
               >Lampirkan Bukti (Opsional)</label
